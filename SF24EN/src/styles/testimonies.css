@@ -1,0 +1,328 @@
+/*main container*/
+.testimonies{
+    width: 100%;
+    min-height: 100svh;
+    background-image: url("/grey-bg.webp");
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    padding: 3rem 5rem;
+    gap: 1rem;
+}
+
+/*title container*/
+.testimonies-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 5rem;
+}
+
+.slider-arrows{
+    display: none;
+}
+
+
+.testimonies-title .title{
+    font-family: var(--font-title);
+    font-size: clamp(3rem, 0.4286rem + 2.8571vw, 3.5rem);
+    line-height: 57px;
+}
+
+.testimonies-title h2, .testimonies-title h2 span{
+    font-family: var(--font-title);
+    font-size: clamp(3rem, 0.4286rem + 2.8571vw, 3.5rem);
+    line-height: 57px;
+}
+
+.testimonies .middle{
+    margin-left: 3vw;
+}
+
+.testimonies-title .title h2:last-child{
+    margin-left: 6vw;
+}
+
+.testimonies-title h2 span{
+    color: var(--color-yellow);
+}
+
+.seemore a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-yellow);
+    font-family: var(--font-text);
+    font-weight: 500;
+    font-size: 1.4rem;
+    border-bottom: 1.5px solid var(--color-yellow);
+    padding-bottom: 0.5rem;
+}
+
+.seemore a img{
+    width:28px;
+    height: auto;
+}
+
+/*slider container*/
+.testimonies-slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*slider*/
+.testimonies-slider .slider{
+    max-width: 1122px;
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    overflow-y: hidden;
+    touch-action: none;
+}
+
+/*scroll behavior*/
+.testimonies-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonies-slider.no-transition {
+    scroll-behavior: auto;
+}
+
+.testimonies-slider.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.testimonies-slider.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+/*testimonies card*/
+.testimonies .card{
+    width: 350px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    background: rgb(82, 82, 82, 0.2);
+    border: 1px solid #c0b86f;
+    padding: 1rem;
+    padding-top: 3rem;
+    margin-left: 1.5rem;
+}
+
+.testimonies .card:last-child{
+    display: none;
+    margin-right: 0;
+}
+
+/*image*/
+.testimonies .card img{
+    width: 100px;
+    height: auto;
+    padding-bottom: 1rem;
+}
+
+/*name*/
+.testimonies .card h4{
+    font-family: var(--font-title);
+    color: var(--color-yellow);
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+/*text*/
+.testimonies .card p{
+    max-width: 95%;
+    font-family: var(--font-text);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/*responsive desing*/
+
+/*DESTOCKS*/
+@media only screen and (max-width:1440px){
+
+    /*main container*/
+    .testimonies{
+        padding: 3rem 1rem;
+    }
+
+    .testimonies-title h2, .testimonies-title h2 span{
+        font-size: clamp(2rem, 0.8571rem + 2.381vw, 3rem);
+        line-height: 47px;
+    }
+
+    .testimonies-title p{
+        font-size: clamp(1.8rem, 1.5714rem + 0.4762vw, 2rem);
+    }
+
+    /*slider*/
+    .testimonies-slider .slider{
+        max-width: 950px;
+        align-items: center;
+    }
+
+
+    /*testimonies card*/
+    .testimonies .card{
+        width: 280px;
+        height: 380px;
+        padding: 1rem;
+        padding-top: 3rem;
+        margin-right: 0;
+    }
+
+    /*image*/
+    .testimonies .card img{
+        width: 80px;
+        height: auto;
+        padding-bottom: 1rem;
+    }
+
+    /*name*/
+    .testimonies .card h4{
+        font-size: 1.5rem;
+    }
+
+    /*text*/
+    .testimonies .card p{
+        max-width: 100%;
+        font-size: 0.9rem;
+    }
+
+}
+
+/*NOTEBOOKS*/
+@media only screen and (max-width:1023px){
+
+    /*main container*/
+    .testimonies{
+        padding: 3rem 1.5rem;
+    }
+
+    .testimonies-title{
+        gap: 1.5rem;
+    }
+    
+
+    .slider-arrows{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    /*arrows*/
+    .slider-arrows img{
+        width: 50px;
+        height: 70px;
+        cursor: pointer;
+    }
+
+     /*slider*/
+     .testimonies-slider .slider{
+        max-width: 330px;
+        align-items: center;
+        overflow-y: hidden;
+        touch-action: auto;
+    }
+
+    /*testimonies card*/
+    .testimonies .card{
+        width: 330px;
+        height: 430px;
+        gap: 1.5rem;
+        padding: 1rem;
+        padding-top: 3rem;
+        margin: 0;
+    }
+
+    .testimonies .card h4{
+        font-size: 1.6rem;
+    }
+
+    .testimonies .card P{
+        font-size: 1rem;
+    }
+
+    /*image*/
+    .testimonies .card img{
+        width: 120px;
+        height: auto;
+    }
+
+    .testimonies .card:last-child{
+        display: flex;
+    }
+
+}
+
+/*TABLETS*/
+@media only screen and (max-width:768px){
+    
+
+    .testimonies-title{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 2rem;
+    }
+
+    .testimonies-title h2, .testimonies-title h2 span{
+        font-size: 1.7rem;
+        line-height: 32px;
+    }
+
+    /*slider container*/
+    .testimonies-slider{
+        gap: 1rem;
+    }
+
+    /*arrows*/
+    .slider-arrows img{
+        width: 70px;
+        height: auto;
+    }
+
+    .seemore a{
+        margin-top: 1rem;
+        font-size: 1.4rem;
+    }
+}
+
+/*SMARTH PHONES*/
+@media only screen and (max-width:480px){
+
+    .testimonies{
+        padding: 3rem 1rem;
+    }
+
+    .testimonies-title h2, .testimonies-title h2 span{
+        font-size: 1.5rem;
+        line-height: 32px;
+    }
+
+    /*arrows*/
+    .slider-arrows img{
+        width: 70px;
+        height: auto;
+    }
+
+    .seemore a{
+        font-size: 1.2rem;
+        padding-bottom: 0.3rem;
+    }
+}
